@@ -60,8 +60,81 @@
 
     <br><br>
 
+<h3>Enter Your Unlock Code</h3>
+
+<input
+id="code"
+type="text"
+placeholder="Enter Code">
+
+<br><br>
+
+<button onclick="unlock()">
+Unlock
+</button>
+
+<br><br>
+
+<div id="download" style="display:none;">
+
 <a href="song.mp3" download class="download-btn">
     ⬇ Download "CHILDISH"
 </a>
+
+</div>
+</a>
+    <div id="download" style="display:none;">
+
+<a href="song.mp3" download class="download-btn">
+    ⬇ Download "CHILDISH"
+</a>
+
+</div>
+
+<script>
+
+const codes = [
+    "CHILDISH01",
+    "CHILDISH02",
+    "CHILDISH03",
+    "CHILDISH04",
+    "CHILDISH05",
+    "CHILDISH06",
+    "CHILDISH07",
+    "CHILDISH08",
+    "CHILDISH09",
+    "CHILDISH10",
+    "CHILDISH11",
+    "CHILDISH12",
+    "CHILDISH13",
+    "CHILDISH14",
+    "CHILDISH15",
+    "CHILDISH16",
+    "CHILDISH17",
+    "CHILDISH18",
+    "CHILDISH19",
+    "CHILDISH20"
+];
+
+function unlock() {
+
+    const code = document.getElementById("code").value.trim().toUpperCase();
+
+    if (codes.includes(code)) {
+
+        document.getElementById("download").style.display = "block";
+
+    } else {
+
+        alert("Invalid Unlock Code");
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
 </body>
 </html>
