@@ -105,6 +105,59 @@ body{
 .instagram-btn:hover{
     background:#c2265d;
 }
+.store-banner{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:30px;
+    max-width:950px;
+    margin:50px auto;
+    background:rgba(20,20,20,.85);
+    border:1px solid #333;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 12px 30px rgba(0,0,0,.45);
+}
+
+.store-banner img{
+    width:350px;
+    max-width:100%;
+    height:auto;
+    display:block;
+    object-fit:cover;
+}
+
+.store-info{
+    flex:1;
+    padding:30px;
+    text-align:left;
+}
+
+.store-info h3{
+    margin-top:0;
+    font-size:32px;
+}
+
+.store-info p{
+    color:#ddd;
+    line-height:1.6;
+}
+
+.store-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:15px 30px;
+    background:#0d6efd;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.store-btn:hover{
+    background:#0954c9;
+}
     </style>
 
 </head>
@@ -148,7 +201,32 @@ Unlock
     </a>
 
 </div>
+<h2 style="margin-top:60px;">🛍 Official Merchandise</h2>
 
+<div class="store-banner">
+
+    <img src="childish-store.jpg" alt="Official Merchandise">
+
+    <div class="store-info">
+
+        <h3>The Official CHILDISH Collection</h3>
+
+        <p>
+            Shop official tees, bundles, CDs and accessories.
+            Every purchase directly supports Marshon Lamar.
+        </p>
+
+        <a href="https://you-feel-me-co.square.site/"
+           target="_blank"
+           class="store-btn">
+
+            Shop Collection →
+
+        </a>
+
+    </div>
+
+</div>
 <div class="instagram-card">
     <h3>📲 Stay Connected</h3>
 
@@ -209,6 +287,7 @@ function unlock() {
 
 </script>
 
+</div>
+
 </body>
 </html>
-
