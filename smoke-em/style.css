@@ -530,7 +530,165 @@ a {
     margin-top: 28px;
 }
 
+/* ==========================================
+   COMMUNITY IMPACT SECTION
+========================================== */
 
+.impact-section {
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: #080808;
+
+    overflow: hidden;
+}
+
+
+.impact-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(213, 32, 24, 0.08),
+            rgba(0, 0, 0, 0.95) 70%
+        );
+}
+
+
+.impact-content {
+    position: relative;
+
+    z-index: 5;
+
+    width: min(1000px, 88%);
+
+    padding: 100px 20px;
+}
+
+
+.impact-label {
+    color: #d52018;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    font-weight: bold;
+
+    margin-bottom: 30px;
+}
+
+
+.impact-content h2 {
+    font-family:
+        Impact,
+        "Arial Black",
+        sans-serif;
+
+    font-size:
+        clamp(58px, 9vw, 125px);
+
+    line-height: 0.9;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 45px;
+}
+
+
+.impact-content h2 span {
+    display: block;
+
+    color: #d52018;
+}
+
+
+.impact-copy {
+    max-width: 820px;
+
+    margin: 0 auto;
+
+    font-size:
+        clamp(17px, 2vw, 24px);
+
+    line-height: 1.7;
+
+    color: #d8d1c6;
+}
+
+
+.impact-support {
+    margin-top: 70px;
+}
+
+
+.impact-support > p {
+    color: #77716a;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+
+.impact-organizations {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 16px 28px;
+}
+
+
+.impact-organizations a {
+    color: #f4efe5;
+
+    font-size:
+        clamp(18px, 2vw, 26px);
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    border-bottom: 2px solid #d52018;
+
+    padding-bottom: 5px;
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.impact-organizations a:hover {
+    color: #d52018;
+
+    border-color: #f4efe5;
+}
+
+
+.impact-organizations span {
+    color: #d52018;
+
+    font-size: 24px;
+}
 
 /* ==========================================
    PRODUCT SECTION
