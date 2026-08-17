@@ -24,7 +24,44 @@ body {
 
     overflow-x: hidden;
 }
+/* ==========================================
+   FIXED PAGE BACKGROUND
+========================================== */
 
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.72),
+            rgba(0, 0, 0, 0.82)
+        ),
+        url("PACK.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(0, 0, 0, 0.05),
+            rgba(0, 0, 0, 0.45)
+        );
+
+    z-index: -1;
+    pointer-events: none;
+}
 
 img {
     display: block;
