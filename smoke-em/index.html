@@ -1,103 +1,459 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <title>Smoke 'Em</title>
+    <meta
+        name="description"
+        content="Smoke 'Em If You Got 'Em by Manny's House Pearl."
+    >
+
+    <title>Smoke 'Em | Manny's House Pearl</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
-    <!-- HERO -->
-    <section class="hero">
+    <!-- ===================================== -->
+    <!-- TOP NAV -->
+    <!-- ===================================== -->
 
-        <div class="hero-content">
-            <p class="eyebrow">NEW RELEASE</p>
+    <header class="site-header">
 
-            <h1>SMOKE 'EM</h1>
-
-            <p class="hero-subtitle">
-                More than a shirt.
-            </p>
-
-            <a href="#story" class="scroll-button">
-                Explore
-            </a>
-        </div>
-
-    </section>
-
-
-    <!-- FIRST STORY SECTION -->
-    <section class="story-section" id="story">
-
-        <div class="story-image reveal">
-            <img src="images/front.jpg" alt="Smoke 'Em T-Shirt Front">
-        </div>
-
-        <div class="story-text reveal">
-
-            <p class="section-number">01</p>
-
-            <h2>THE PIECE</h2>
-
-            <p>
-                The Smoke 'Em tee was created to make a statement
-                before you ever say a word.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- SECOND STORY SECTION -->
-    <section class="story-section reverse">
-
-        <div class="story-image reveal">
-            <img src="images/back.jpg" alt="Smoke 'Em T-Shirt Back">
-        </div>
-
-        <div class="story-text reveal">
-
-            <p class="section-number">02</p>
-
-            <h2>THE ART</h2>
-
-            <p>
-                The artwork becomes the centerpiece of the piece,
-                designed to hit differently from every angle.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- PRODUCT DETAILS -->
-    <section class="details">
-
-        <p class="section-number">03</p>
-
-        <h2>SMOKE 'EM</h2>
-
-        <p class="details-copy">
-            Heavy streetwear influence. Clean silhouette.
-            Built around the artwork.
-        </p>
-
-        <a href="#" class="buy-button">
-            SHOP SMOKE 'EM
+        <a href="#top" class="brand">
+            MANNY'S HOUSE
+            <span>PEARL</span>
         </a>
 
-    </section>
+        <a href="#shop" class="header-shop-link">
+            SHOP
+        </a>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ===================================== -->
+        <!-- HERO -->
+        <!-- ===================================== -->
+
+        <section class="hero" id="top">
+
+            <div class="hero-background"></div>
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <p class="hero-brand">
+                    MANNY'S HOUSE PEARL PRESENTS
+                </p>
+
+                <h1>
+                    SMOKE 'EM
+                    <span>IF YOU GOT 'EM</span>
+                </h1>
+
+                <p class="hero-copy">
+                    A statement piece built to make you look twice.
+                </p>
+
+                <a href="#story" class="scroll-link">
+                    SCROLL TO ENTER
+                    <span>↓</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ===================================== -->
+        <!-- SCROLL STORY -->
+        <!-- ===================================== -->
+
+        <section class="story" id="story">
+
+
+            <!--
+                This side stays fixed while
+                the story sections scroll.
+            -->
+
+            <div class="story-visual">
+
+
+                <div class="story-image active" data-image="0">
+                    <img
+                        src="images/package.jpg"
+                        alt="Smoke 'Em artwork"
+                    >
+                </div>
+
+
+                <div class="story-image" data-image="1">
+                    <img
+                        src="images/truth.jpg"
+                        alt="Smoke 'Em design detail"
+                    >
+                </div>
+
+
+                <div class="story-image" data-image="2">
+                    <img
+                        src="images/message.jpg"
+                        alt="Smoke 'Em shirt campaign"
+                    >
+                </div>
+
+
+                <div class="story-image" data-image="3">
+                    <img
+                        src="images/details.jpg"
+                        alt="Smoke 'Em shirt details"
+                    >
+                </div>
+
+
+                <div class="story-image" data-image="4">
+                    <img
+                        src="images/product.jpg"
+                        alt="Smoke 'Em shirt"
+                    >
+                </div>
+
+
+                <div class="visual-shade"></div>
+
+                <div class="visual-counter">
+                    <span id="currentNumber">01</span>
+                    <span class="counter-line"></span>
+                    <span>05</span>
+                </div>
+
+            </div>
+
+
+
+            <!-- ================================= -->
+            <!-- SCROLLING TEXT -->
+            <!-- ================================= -->
+
+            <div class="story-copy">
+
+
+                <!-- STORY 01 -->
+
+                <article
+                    class="story-panel active"
+                    data-step="0"
+                >
+
+                    <div class="panel-inner">
+
+                        <span class="story-number">
+                            01
+                        </span>
+
+                        <p class="story-label">
+                            THE PACKAGE
+                        </p>
+
+                        <h2>
+                            YOU KNOW
+                            <span>THE LOOK.</span>
+                        </h2>
+
+                        <p>
+                            Familiar at first glance.
+                        </p>
+
+                        <p>
+                            A shape. A color. A package
+                            burned into American visual culture.
+                        </p>
+
+                        <p class="accent-copy">
+                            But this isn't what you think it is.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- STORY 02 -->
+
+                <article
+                    class="story-panel"
+                    data-step="1"
+                >
+
+                    <div class="panel-inner">
+
+                        <span class="story-number">
+                            02
+                        </span>
+
+                        <p class="story-label">
+                            LOOK AGAIN
+                        </p>
+
+                        <h2>
+                            NOTHING HERE
+                            <span>IS ACCIDENTAL.</span>
+                        </h2>
+
+                        <p>
+                            The familiar image changes when
+                            you stop and actually look at it.
+                        </p>
+
+                        <p>
+                            What appeared ordinary becomes
+                            something far more uncomfortable.
+                        </p>
+
+                        <p class="accent-copy">
+                            That's the point.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- STORY 03 -->
+
+                <article
+                    class="story-panel"
+                    data-step="2"
+                >
+
+                    <div class="panel-inner">
+
+                        <span class="story-number">
+                            03
+                        </span>
+
+                        <p class="story-label">
+                            THE MESSAGE
+                        </p>
+
+                        <h2>
+                            HATE DOESN'T
+                            <span>DESERVE COMFORT.</span>
+                        </h2>
+
+                        <p>
+                            Smoke 'Em uses satire,
+                            confrontation and familiar imagery
+                            to challenge racist ideology.
+                        </p>
+
+                        <p>
+                            The piece isn't designed to blend in.
+                            It's designed to force a second look
+                            and start a conversation.
+                        </p>
+
+                        <p class="accent-copy">
+                            Silence doesn't make hate disappear.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- STORY 04 -->
+
+                <article
+                    class="story-panel"
+                    data-step="3"
+                >
+
+                    <div class="panel-inner">
+
+                        <span class="story-number">
+                            04
+                        </span>
+
+                        <p class="story-label">
+                            THE ART
+                        </p>
+
+                        <h2>
+                            WEAR
+                            <span>THE STATEMENT.</span>
+                        </h2>
+
+                        <p>
+                            The shirt turns the message into
+                            something physical.
+                        </p>
+
+                        <p>
+                            Bold graphic placement.
+                            High contrast artwork.
+                            A piece meant to be seen from
+                            across the room.
+                        </p>
+
+                        <p class="accent-copy">
+                            Art doesn't always whisper.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- STORY 05 -->
+
+                <article
+                    class="story-panel"
+                    data-step="4"
+                >
+
+                    <div class="panel-inner">
+
+                        <span class="story-number">
+                            05
+                        </span>
+
+                        <p class="story-label">
+                            THE PIECE
+                        </p>
+
+                        <h2>
+                            SMOKE 'EM
+                            <span>IF YOU GOT 'EM.</span>
+                        </h2>
+
+                        <p>
+                            Designed by Manny's House Pearl.
+                        </p>
+
+                        <p>
+                            Streetwear built around artwork,
+                            message and conversation.
+                        </p>
+
+                        <p class="accent-copy">
+                            Limited release.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ===================================== -->
+        <!-- FINAL PRODUCT SECTION -->
+        <!-- ===================================== -->
+
+        <section class="product-section">
+
+
+            <div class="product-background"></div>
+
+            <div class="product-overlay"></div>
+
+
+            <div class="product-content">
+
+                <p class="product-label">
+                    MANNY'S HOUSE PEARL
+                </p>
+
+                <h2>
+                    SMOKE 'EM
+                </h2>
+
+                <p class="product-subtitle">
+                    IF YOU GOT 'EM
+                </p>
+
+                <div class="product-divider"></div>
+
+
+                <div class="product-details">
+
+                    <span>PREMIUM COTTON</span>
+
+                    <span>STREETWEAR FIT</span>
+
+                    <span>LIMITED DROP</span>
+
+                </div>
+
+
+                <a
+                    id="shop"
+                    class="shop-button"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    SHOP THE DROP
+                    <span>→</span>
+                </a>
+
+
+                <p class="shop-note">
+                    MANNY'S HOUSE PEARL
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ===================================== -->
+    <!-- FOOTER -->
+    <!-- ===================================== -->
+
+    <footer>
+
+        <p>
+            © 2026 MANNY'S HOUSE PEARL
+        </p>
+
+        <p>
+            ALL RIGHTS RESERVED
+        </p>
+
+    </footer>
 
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
