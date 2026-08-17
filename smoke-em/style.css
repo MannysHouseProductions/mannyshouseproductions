@@ -155,11 +155,14 @@ a {
     align-items: center;
 
     overflow: hidden;
+  
+   background: transparent;
 }
 
 
 .hero-background {
-    position: absolute;
+    display: none;
+}
 
     inset: 0;
 
@@ -173,11 +176,7 @@ a {
 
     transition:
         transform 5s ease-out;
-}
 
-
-body.loaded .hero-background {
-    transform: scale(1);
 }
 
 
@@ -549,6 +548,8 @@ body.loaded .hero-background {
     text-align: center;
 
     overflow: hidden;
+
+   background: transparent;
 }
 
 
@@ -557,7 +558,9 @@ body.loaded .hero-background {
 
     inset: 0;
 
-    background-image: url("images/product.jpg");
+    .product-background {
+    display: none;
+}
 
     background-size: cover;
 
