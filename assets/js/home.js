@@ -248,60 +248,58 @@ if (hero) {
 ===================================================== */
 
 const testimonialVideos =
-    document.querySelectorAll(
-        ".testimonial-video"
-    );
+    document.querySelectorAll(".testimonial-video");
+
+
+function playTestimonial(video) {
+
+    video.pause();
+    video.currentTime = 0;
+    video.muted = false;
+
+    video.play()
+        .catch(() => {
+
+            /*
+            Browser has blocked audible autoplay.
+            DO NOT fall back to muted playback.
+            */
+
+            video.pause();
+
+        });
+
+}
+
+
+function stopTestimonial(video) {
+
+    video.pause();
+    video.currentTime = 0;
+
+}
 
 
 testimonialVideos.forEach(video => {
 
     const frame =
-        video.closest(
-            ".visual-frame"
-        );
+        video.closest(".visual-frame");
 
-
-    if (!frame) {
-        return;
-    }
+    if (!frame) return;
 
 
     const testimonialObserver =
         new MutationObserver(() => {
 
-            if (
-                frame.classList.contains(
-                    "active"
-                )
-            ) {
+            if (frame.classList.contains("active")) {
 
-                video.currentTime = 0;
-
-                video.muted = false;
-
-                video.play()
-                    .catch(() => {
-
-                        /*
-                        Browser may temporarily block
-                        audible autoplay.
-                        Keep playing muted if necessary.
-                        */
-
-                        video.muted = true;
-
-                        video.play()
-                            .catch(() => {});
-
-                    });
+                playTestimonial(video);
 
             }
 
             else {
 
-                video.pause();
-
-                video.currentTime = 0;
+                stopTestimonial(video);
 
             }
 
@@ -317,3 +315,51 @@ testimonialVideos.forEach(video => {
     );
 
 });
+
+
+/* =====================================================
+   UNLOCK AUDIO AFTER FIRST USER INTERACTION
+===================================================== */
+
+function unlockTestimonials() {
+
+    testimonialVideos.forEach(video => {
+
+        const frame =
+            video.closest(".visual-frame");
+
+        if (
+            frame &&
+            frame.classList.contains("active")
+        ) {
+
+            video.muted = false;
+
+            video.play()
+                .catch(() => {});
+
+        }
+
+    });
+
+}
+
+
+document.addEventListener(
+    "pointerdown",
+    unlockTestimonials,
+    { once: true }
+);
+
+document.addEventListener(
+    "touchstart",
+    unlockTestimonials,
+    { once: true }
+);
+
+document.addEventListener(
+    "keydown",
+    unlockTestimonials,
+    { once: true }
+);
+
