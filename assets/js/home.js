@@ -243,3 +243,77 @@ if (hero) {
     );
 
 }
+/* =====================================================
+   TESTIMONIAL VIDEO PLAYBACK
+===================================================== */
+
+const testimonialVideos =
+    document.querySelectorAll(
+        ".testimonial-video"
+    );
+
+
+testimonialVideos.forEach(video => {
+
+    const frame =
+        video.closest(
+            ".visual-frame"
+        );
+
+
+    if (!frame) {
+        return;
+    }
+
+
+    const testimonialObserver =
+        new MutationObserver(() => {
+
+            if (
+                frame.classList.contains(
+                    "active"
+                )
+            ) {
+
+                video.currentTime = 0;
+
+                video.muted = false;
+
+                video.play()
+                    .catch(() => {
+
+                        /*
+                        Browser may temporarily block
+                        audible autoplay.
+                        Keep playing muted if necessary.
+                        */
+
+                        video.muted = true;
+
+                        video.play()
+                            .catch(() => {});
+
+                    });
+
+            }
+
+            else {
+
+                video.pause();
+
+                video.currentTime = 0;
+
+            }
+
+        });
+
+
+    testimonialObserver.observe(
+        frame,
+        {
+            attributes: true,
+            attributeFilter: ["class"]
+        }
+    );
+
+});
