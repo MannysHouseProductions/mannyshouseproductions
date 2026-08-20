@@ -362,4 +362,103 @@ document.addEventListener(
     unlockTestimonials,
     { once: true }
 );
+/* =====================================================
+   APPAREL SCROLL FIX
+===================================================== */
 
+const apparelSection =
+    document.querySelector(".apparel-section");
+
+
+if (apparelSection) {
+
+    const apparelPanels =
+        apparelSection.querySelectorAll(
+            ".story-panel"
+        );
+
+    const apparelVisuals =
+        apparelSection.querySelectorAll(
+            ".visual-frame"
+        );
+
+
+    function activateApparelStep(panel) {
+
+        const step =
+            panel.dataset.step;
+
+
+        /* STORY TEXT */
+
+        apparelPanels.forEach(item => {
+
+            item.classList.remove("active");
+
+        });
+
+        panel.classList.add("active");
+
+
+        /* MATCHING IMAGE */
+
+        apparelVisuals.forEach(item => {
+
+            item.classList.remove("active");
+
+        });
+
+
+        const matchingVisual =
+            apparelSection.querySelector(
+                `[data-visual="apparel-${step}"]`
+            );
+
+
+        if (matchingVisual) {
+
+            matchingVisual.classList.add("active");
+
+        }
+
+    }
+
+
+    const apparelObserver =
+        new IntersectionObserver(
+
+            entries => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        activateApparelStep(
+                            entry.target
+                        );
+
+                    }
+
+                });
+
+            },
+
+            {
+                root: null,
+
+                rootMargin:
+                    "-42% 0px -42% 0px",
+
+                threshold: 0
+            }
+
+        );
+
+
+    apparelPanels.forEach(panel => {
+
+        apparelObserver.observe(panel);
+
+    });
+
+}
