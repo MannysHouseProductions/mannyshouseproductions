@@ -1000,3 +1000,18 @@ a {
     }
 
 }
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.hero-buttons .primary-button {
+    margin: 0;
+}
+
+.instagram-button {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,.45);
+}
