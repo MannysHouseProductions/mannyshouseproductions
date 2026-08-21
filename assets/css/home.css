@@ -1,7 +1,6 @@
 /* =========================================================
    MANNY'S HOUSE PRODUCTIONS
    HOME PAGE
-   CLEAN MASTER STYLESHEET
    ========================================================= */
 
 
@@ -18,6 +17,7 @@
     --soft-white: #f4f4f4;
     --gray: #9b9b9b;
 
+    /* Manny's House blue */
     --blue: #2e7bb1;
 }
 
@@ -207,6 +207,7 @@ a {
 }
 
 @keyframes house-scroll {
+
     from {
         transform: translateX(0);
     }
@@ -214,6 +215,7 @@ a {
     to {
         transform: translateX(-50%);
     }
+
 }
 
 
@@ -310,17 +312,44 @@ a {
     color: var(--blue);
 }
 
+.scroll-cue {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+
+    margin-top: 38px;
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid var(--blue);
+
+    color: var(--blue);
+
+    font-size: 10px;
+    font-weight: 900;
+
+    letter-spacing: 3px;
+}
+
+.scroll-cue span {
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+   ========================================================= */
+
 .hero-buttons {
     display: flex;
     align-items: center;
     gap: 14px;
     flex-wrap: wrap;
 
-    margin-top: 38px;
+    margin-top: 28px;
 }
 
 .hero-buttons .primary-button {
-    margin-top: 0;
+    margin: 0;
 }
 
 .instagram-button {
@@ -330,7 +359,7 @@ a {
 
 
 /* =========================================================
-   MAIN STORY SYSTEM — DESKTOP
+   MAIN STORY SYSTEM
    ========================================================= */
 
 .story-section {
@@ -344,6 +373,11 @@ a {
 
     background: var(--black);
 }
+
+
+/* ---------------------------------------------------------
+   ALTERNATING SECTIONS
+   --------------------------------------------------------- */
 
 .story-section.reverse {
     grid-template-columns: 45% 55%;
@@ -361,7 +395,7 @@ a {
 
 
 /* =========================================================
-   STICKY VISUAL SIDE — DESKTOP
+   STICKY VISUAL SIDE
    ========================================================= */
 
 .story-visual {
@@ -453,7 +487,7 @@ a {
 
 
 /* =========================================================
-   STORY SIDE — DESKTOP
+   STORY SIDE
    ========================================================= */
 
 .story-copy {
@@ -589,33 +623,30 @@ a {
 
 
 /* =========================================================
-   SECTION BACKGROUNDS / DETAILS
+   VISUALS SECTION
    ========================================================= */
 
 .visuals-section .story-copy {
     background: #0b0b0b;
 }
 
+
+/* =========================================================
+   ARTIST DEVELOPMENT SECTION
+   ========================================================= */
+
 .development-section .story-copy {
     background: #080808;
 }
 
+
+/* =========================================================
+   LIVE SECTION
+   ========================================================= */
+
 .live-section .story-copy {
     background: #0d0d0d;
 }
-
-.work-section .story-copy {
-    background: #070707;
-}
-
-.apparel-section .story-copy {
-    background: #0a0a0a;
-}
-
-
-/* =========================================================
-   LIVE SECTION DETAILS
-   ========================================================= */
 
 .ticket-example {
     margin: 32px 0;
@@ -663,8 +694,21 @@ a {
 
 
 /* =========================================================
-   APPAREL DETAILS
+   WORK WITH THE HOUSE
    ========================================================= */
+
+.work-section .story-copy {
+    background: #070707;
+}
+
+
+/* =========================================================
+   MANNY'S HOUSE APPAREL
+   ========================================================= */
+
+.apparel-section .story-copy {
+    background: #0a0a0a;
+}
 
 .apparel-rule {
     display: flex;
@@ -763,236 +807,147 @@ a {
 
 /* =========================================================
    MOBILE
-   =========================================================
-   DESKTOP KEEPS THE CINEMATIC SPLIT-SCREEN SYSTEM.
-
-   MOBILE:
-   - HIDES THE TOP SECTION NAV
-   - KEEPS MANNY'S HOUSE IN THE HEADER
-   - KEEPS VISUALS ON THE SURFACE
-   - REMOVES THE SLOW ZOOM
-   - MAKES SCENE CHANGES VERY FAST
-   - KEEPS STORY TEXT FULLY VISIBLE
+   RESTORED ORIGINAL BEHAVIOR
    ========================================================= */
 
 @media (max-width: 850px) {
 
-
-    /* -----------------------------------------------------
-       MOBILE HEADER
-       ----------------------------------------------------- */
-
     .site-header {
-        height: 64px;
+        height: 65px;
 
-        padding: 0 20px;
+        padding: 0 18px;
     }
+
+
+    /* HIDE SECTION NAV ON MOBILE */
 
     .header-nav {
         display: none;
     }
 
-    .header-brand {
-        font-size: 11px;
 
-        letter-spacing: 2.5px;
-    }
-
-
-    /* -----------------------------------------------------
-       MOBILE HERO
-       ----------------------------------------------------- */
+    /* =====================================================
+       HERO
+       ===================================================== */
 
     .hero {
-        min-height: 100svh;
         height: 100svh;
+        min-height: 100svh;
     }
 
     .marquee-track {
-        top: 8svh;
+        top: 0;
 
-        height: 84svh;
-
-        gap: 8px;
+        height: 100%;
     }
 
     .hero-tile {
-        width: 76vw;
+        width: 78vw;
+    }
+
+    .hero-shade {
+        background:
+            linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.98) 0%,
+                rgba(0, 0, 0, 0.78) 38%,
+                rgba(0, 0, 0, 0.28) 70%,
+                rgba(0, 0, 0, 0.10) 100%
+            );
     }
 
     .hero-content {
-        width: 88%;
+        align-self: flex-end;
+
+        margin-bottom: 65px;
     }
 
     .section-kicker {
-        margin-bottom: 18px;
-
         font-size: 9px;
 
         letter-spacing: 4px;
     }
 
     .hero h1 {
-        font-size: 18vw;
-
-        line-height: 0.82;
+        font-size: clamp(64px, 21vw, 105px);
 
         letter-spacing: -2px;
     }
 
-    .hero h1 span {
-        margin-top: 18px;
-    }
-
     .hero-positioning {
-        margin-top: 30px;
-
         font-size: 9px;
+
+        line-height: 2;
 
         letter-spacing: 2px;
     }
 
-    .hero-positioning span {
-        margin: 0 6px;
-    }
+
+    /* HERO BUTTONS STAY SMALL */
 
     .hero-buttons {
-        align-items: stretch;
+        display: flex;
+
+        flex-direction: row;
+
+        align-items: center;
 
         gap: 10px;
 
-        margin-top: 26px;
+        flex-wrap: wrap;
     }
 
     .hero-buttons .primary-button {
-        flex: 1 1 180px;
+        width: auto;
+
+        flex: 0 0 auto;
+
+        justify-content: center;
     }
 
 
-    /* -----------------------------------------------------
-       MOBILE STORY SECTIONS
-       ----------------------------------------------------- */
+    /* =====================================================
+       STORY SECTIONS
+       ===================================================== */
 
     .story-section,
     .story-section.reverse {
         display: block;
+    }
 
-        position: relative;
-
-        width: 100%;
-
-        background: var(--black);
+    .story-section.reverse .story-visual,
+    .story-section.reverse .story-copy {
+        grid-column: auto;
+        grid-row: auto;
     }
 
 
-    /* -----------------------------------------------------
-       MOBILE VISUAL STAGE
+    /* =====================================================
+       STICKY VISUAL
+       ===================================================== */
 
-       The visual remains sticky while its corresponding
-       story panel is active.
-
-       Mobile intentionally removes the slow desktop zoom
-       and long crossfade.
-       ----------------------------------------------------- */
-
-    .story-visual,
-    .story-section.reverse .story-visual {
+    .story-visual {
         position: sticky;
 
         top: 0;
 
-        grid-column: auto;
-        grid-row: auto;
-
         width: 100%;
         height: 100svh;
-
-        overflow: hidden;
-
-        background: #000;
-
-        z-index: 1;
     }
 
 
-    .story-visual .visual-frame {
-        position: absolute;
+    /* =====================================================
+       STORY COPY OVER VISUAL
+       ===================================================== */
 
-        inset: 0;
-
-        display: block;
-
-        width: 100%;
-        height: 100%;
-
-        opacity: 0;
-        visibility: hidden;
-
-        transform: none;
-
-        pointer-events: none;
-
-        z-index: 1;
-
-        transition: opacity 0.08s linear;
-    }
-
-
-    .story-visual .visual-frame.active {
-        opacity: 1;
-        visibility: visible;
-
-        transform: none;
-
-        pointer-events: auto;
-
-        z-index: 5;
-    }
-
-
-    .story-visual .visual-frame img,
-    .story-visual .visual-frame video {
-        display: block;
-
-        width: 100%;
-        height: 100%;
-
-        object-fit: cover;
-        object-position: center;
-    }
-
-
-    .story-visual .visual-frame::after {
-        background:
-            linear-gradient(
-                to top,
-                rgba(0, 0, 0, 0.40),
-                rgba(0, 0, 0, 0.02)
-            );
-    }
-
-
-    .visual-label {
-        display: none;
-    }
-
-
-    /* -----------------------------------------------------
-       MOBILE STORY COPY
-       ----------------------------------------------------- */
-
-    .story-copy,
-    .story-section.reverse .story-copy {
+    .story-copy {
         position: relative;
 
-        grid-column: auto;
-        grid-row: auto;
-
-        z-index: 10;
+        z-index: 30;
 
         margin-top: -100svh;
 
-        background: transparent;
+        background: transparent !important;
     }
 
 
@@ -1001,104 +956,63 @@ a {
 
         min-height: 100svh;
 
-        display: flex;
         align-items: flex-end;
 
         padding:
-            110px
-            24px
-            50px;
+            120px
+            26px
+            60px;
 
         opacity: 1;
-
-        transition: none;
 
         background:
             linear-gradient(
                 to top,
-                rgba(0, 0, 0, 0.97) 0%,
-                rgba(0, 0, 0, 0.82) 29%,
-                rgba(0, 0, 0, 0.28) 58%,
-                rgba(0, 0, 0, 0.00) 80%
+                rgba(0, 0, 0, 0.98) 0%,
+                rgba(0, 0, 0, 0.82) 36%,
+                rgba(0, 0, 0, 0.22) 72%,
+                rgba(0, 0, 0, 0.05) 100%
             );
     }
 
 
-    .story-panel.active,
-    .story-panel:not(.active) {
-        opacity: 1;
-    }
-
-
     .panel-inner {
-        width: 100%;
         max-width: 94%;
     }
 
 
-    .story-number {
-        font-size: 10px;
-    }
-
-
-    .story-label {
-        margin-bottom: 18px;
-
-        font-size: 9px;
-
-        letter-spacing: 3px;
-    }
-
-
     .story-panel h2 {
-        margin-bottom: 24px;
-
-        font-size: clamp(42px, 12vw, 66px);
-
-        line-height: 0.93;
+        font-size: clamp(45px, 14vw, 72px);
     }
 
 
     .story-panel p {
-        margin-bottom: 15px;
-
         font-size: 14px;
 
-        line-height: 1.55;
+        line-height: 1.65;
     }
 
 
-    .final-apparel h2 {
-        font-size: clamp(48px, 14vw, 72px);
+    .visual-label {
+        display: none;
     }
 
 
-    /* -----------------------------------------------------
-       MOBILE BUTTONS
-       ----------------------------------------------------- */
-
-    .primary-button {
-        min-height: 50px;
-
-        padding: 16px 18px;
-    }
-
-
-    /* -----------------------------------------------------
-       MOBILE FOOTER
-       ----------------------------------------------------- */
+    /* =====================================================
+       FOOTER
+       ===================================================== */
 
     .site-footer {
-        min-height: auto;
+        min-height: 280px;
 
         padding:
             45px
-            24px;
+            22px;
 
         flex-direction: column;
-        align-items: flex-start;
 
-        gap: 14px;
+        justify-content: flex-end;
+        align-items: flex-start;
     }
 
 }
@@ -1115,37 +1029,24 @@ a {
     }
 
     .hero h1 span {
-        margin-top: 16px;
-    }
-
-    .hero-positioning {
-        max-width: 300px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-
-    .hero-buttons .primary-button,
-    .primary-button {
-        width: 100%;
-
-        justify-content: space-between;
+        margin-top: 18px;
     }
 
     .story-panel {
         padding:
-            96px
+            100px
             20px
-            42px;
+            45px;
     }
 
     .story-panel h2 {
         font-size: 13vw;
     }
 
-    .story-panel p {
-        font-size: 13px;
+    .primary-button {
+        width: auto;
+
+        justify-content: center;
     }
 
 }
@@ -1165,12 +1066,8 @@ a {
         animation: none;
     }
 
-    *,
-    *::before,
-    *::after {
+    * {
         transition-duration: 0.01ms !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
     }
 
 }
