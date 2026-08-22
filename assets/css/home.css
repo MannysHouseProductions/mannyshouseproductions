@@ -1025,12 +1025,12 @@ a {
 
 /* =========================================================
    MANNY'S HOUSE APPAREL
-   FINAL STOREFRONT
+   CLEAN FINAL STOREFRONT
    ========================================================= */
 
 
 /* =========================================================
-   STORE FLOOR
+   STORE
    ========================================================= */
 
 .apparel-store {
@@ -1039,16 +1039,11 @@ a {
     width: 100%;
 
     padding:
-        90px
-        clamp(
-            24px,
-            4vw,
-            65px
-        )
-        110px;
+        35px
+        clamp(24px, 4vw, 65px)
+        90px;
 
     background: #050505;
-
     color: #ffffff;
 
     overflow: hidden;
@@ -1056,7 +1051,7 @@ a {
 
 
 /* =========================================================
-   STOREFRONT INTRO
+   INTRO
    ========================================================= */
 
 .apparel-storefront-intro {
@@ -1065,21 +1060,24 @@ a {
     margin:
         0
         auto
-        34px;
+        30px;
 
     text-align: center;
 }
 
 
 /* =========================================================
-   BIG BILLBOARD
+   MANNY'S HOUSE / APPAREL
    ========================================================= */
 
 .apparel-billboard {
     width: 100%;
 
+    margin: 0;
+
     text-align: center;
 }
+
 
 .apparel-billboard h2 {
     margin: 0;
@@ -1092,46 +1090,38 @@ a {
         sans-serif;
 
     font-size:
-        clamp(
-            105px,
-            13vw,
-            205px
-        );
+        clamp(90px, 10vw, 160px);
 
     font-weight: 900;
 
-    line-height: 0.76;
+    line-height: 0.78;
 
     letter-spacing: -4px;
 
     text-align: center;
-
     text-transform: uppercase;
 }
+
 
 .apparel-billboard h2 span {
     display: block;
 
-    margin-bottom: 18px;
+    margin-bottom: 8px;
 
     color: var(--blue);
-
-    text-align: center;
 }
 
 
 /* =========================================================
    CENSORED COLLECTION
-   CLOSE THE GAP BELOW APPAREL
    ========================================================= */
 
 .apparel-collection-intro {
     width: 100%;
-
     max-width: 700px;
 
     margin:
-        8px
+        18px
         auto
         0;
 
@@ -1140,8 +1130,9 @@ a {
 
 
 /* =========================================================
-   CENTERED CENSORED LOGO
-   SIZE UNCHANGED
+   CENSORED LOGO
+   THE PNG HAS A LARGE EMPTY BLACK CANVAS.
+   THIS CROPS THAT EMPTY AREA OUT OF THE PAGE FLOW.
    ========================================================= */
 
 .apparel-collection-intro .censored-logo {
@@ -1150,35 +1141,37 @@ a {
     width: 560px;
     max-width: 90%;
 
-    height: auto;
+    height: 155px;
 
     margin:
         0
         auto;
+
+    object-fit: cover;
+    object-position: center;
+
+    overflow: hidden;
 }
 
 
 /* =========================================================
-   SHORT STORY
-   CLOSE THE GAP BELOW THE LOGO
+   CENSORED STORY
    ========================================================= */
 
 .apparel-collection-intro .censored-story {
     display: block;
 
-    position: relative;
-
     width: 100%;
     max-width: 700px;
 
     margin:
-        8px
+        10px
         auto
         0;
 
     padding:
-        16px
-        30px;
+        14px
+        24px;
 
     color: #a8a8a8;
 
@@ -1219,25 +1212,20 @@ a {
 .apparel-collection-intro .censored-story span {
     display: block;
 
-    margin-top: 9px;
+    margin-top: 7px;
 }
 
 
 /* =========================================================
-   PRODUCTS — FOUR ACROSS
+   PRODUCT ROW
+   FOUR ACROSS
    ========================================================= */
 
 .product-grid {
     display: grid;
 
     grid-template-columns:
-        repeat(
-            4,
-            minmax(
-                0,
-                1fr
-            )
-        );
+        repeat(4, minmax(0, 1fr));
 
     gap: 18px;
 
@@ -1246,13 +1234,14 @@ a {
     margin: 0;
 }
 
+
 .product-card {
     min-width: 0;
 }
 
 
 /* =========================================================
-   PRODUCT IMAGE TILE
+   PRODUCT IMAGE
    ========================================================= */
 
 .product-image {
@@ -1274,6 +1263,7 @@ a {
         transform 0.3s ease,
         box-shadow 0.3s ease;
 }
+
 
 .product-image img {
     display: block;
@@ -1312,13 +1302,7 @@ a {
 
     color: #ffffff;
 
-    background:
-        rgba(
-            0,
-            0,
-            0,
-            0
-        );
+    background: rgba(0, 0, 0, 0);
 
     font-size: 10px;
     font-weight: 900;
@@ -1330,6 +1314,7 @@ a {
         background 0.25s ease;
 }
 
+
 .shop-overlay span {
     color: var(--blue);
 
@@ -1338,7 +1323,7 @@ a {
 
 
 /* =========================================================
-   PRODUCT HOVER
+   DESKTOP PRODUCT HOVER
    ========================================================= */
 
 .product-image:hover {
@@ -1350,32 +1335,22 @@ a {
         0
         18px
         42px
-        rgba(
-            0,
-            0,
-            0,
-            0.48
-        );
+        rgba(0, 0, 0, 0.48);
 }
+
 
 .product-image:hover img {
-    transform:
-        scale(1.04);
+    transform: scale(1.04);
 
-    filter:
-        brightness(0.48);
+    filter: brightness(0.48);
 }
+
 
 .product-image:hover .shop-overlay {
     opacity: 1;
 
     background:
-        rgba(
-            0,
-            0,
-            0,
-            0.36
-        );
+        rgba(0, 0, 0, 0.36);
 }
 
 
@@ -1386,6 +1361,7 @@ a {
 .product-info {
     padding-top: 17px;
 }
+
 
 .product-info h3 {
     margin:
@@ -1401,16 +1377,13 @@ a {
         sans-serif;
 
     font-size:
-        clamp(
-            24px,
-            2vw,
-            34px
-        );
+        clamp(24px, 2vw, 34px);
 
     line-height: 1;
 
     letter-spacing: 0.3px;
 }
+
 
 .product-spec {
     margin:
@@ -1427,6 +1400,7 @@ a {
 
     letter-spacing: 1.4px;
 }
+
 
 .product-price {
     margin: 0;
@@ -1447,31 +1421,32 @@ a {
 
 
 /* =========================================================
-   APPAREL — TABLET
+   TABLET
    ========================================================= */
 
 @media (max-width: 1000px) {
 
     .apparel-store {
         padding:
-            80px
+            35px
             24px
-            95px;
+            80px;
     }
+
 
     .apparel-billboard h2 {
         font-size: 15vw;
     }
 
+
+    .apparel-collection-intro {
+        margin-top: 15px;
+    }
+
+
     .product-grid {
         grid-template-columns:
-            repeat(
-                2,
-                minmax(
-                    0,
-                    1fr
-                )
-            );
+            repeat(2, minmax(0, 1fr));
 
         gap:
             45px
@@ -1482,20 +1457,21 @@ a {
 
 
 /* =========================================================
-   APPAREL — MOBILE
+   MOBILE
    ========================================================= */
 
 @media (max-width: 600px) {
 
     .apparel-store {
         padding:
-            65px
+            30px
             18px
-            80px;
+            70px;
     }
 
+
     .apparel-storefront-intro {
-        margin-bottom: 32px;
+        margin-bottom: 25px;
     }
 
 
@@ -1509,21 +1485,27 @@ a {
         letter-spacing: -2px;
     }
 
+
     .apparel-billboard h2 span {
-        margin-bottom: 9px;
+        margin-bottom: 6px;
     }
 
 
-    /* COLLECTION — KEEP IT TIGHT */
+    /* COLLECTION */
 
     .apparel-collection-intro {
-        margin-top: 6px;
+        margin-top: 12px;
     }
 
 
     .apparel-collection-intro .censored-logo {
-        width: 210px;
-        max-width: 210px;
+        width: 300px;
+        max-width: 90%;
+
+        height: 95px;
+
+        object-fit: cover;
+        object-position: center;
     }
 
 
@@ -1533,12 +1515,12 @@ a {
         margin-top: 8px;
 
         padding:
-            14px
+            12px
             10px;
 
         font-size: 13px;
 
-        line-height: 1.6;
+        line-height: 1.55;
     }
 
 
@@ -1550,12 +1532,13 @@ a {
         gap: 42px;
     }
 
+
     .product-image {
         aspect-ratio: 4 / 5;
     }
 
 
-    /* MOBILE DOESN'T RELY ON HOVER */
+    /* MOBILE DOES NOT RELY ON HOVER */
 
     .shop-overlay {
         top: auto;
@@ -1580,11 +1563,13 @@ a {
         font-size: 9px;
     }
 
+
     .product-image:hover {
         transform: none;
 
         box-shadow: none;
     }
+
 
     .product-image:hover img {
         transform: none;
@@ -1592,13 +1577,16 @@ a {
         filter: none;
     }
 
+
     .product-info {
         padding-top: 15px;
     }
 
+
     .product-info h3 {
         font-size: 30px;
     }
+
 
     .product-price {
         font-size: 23px;
