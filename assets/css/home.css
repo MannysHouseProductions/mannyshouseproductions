@@ -1070,3 +1070,464 @@ a {
     }
 
 }
+/* =========================================================
+   MANNY'S HOUSE APPAREL — FULL-WIDTH STORE
+   ========================================================= */
+
+.apparel-store {
+    position: relative;
+
+    width: 100%;
+
+    padding:
+        120px
+        clamp(24px, 5vw, 80px)
+        130px;
+
+    background: #050505;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   APPAREL HEADER
+   ========================================================= */
+
+.apparel-store-header {
+    width: 100%;
+
+    margin-bottom: 72px;
+}
+
+
+.apparel-store-header > h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: Impact, "Arial Black", sans-serif;
+
+    font-size: clamp(80px, 11vw, 180px);
+
+    line-height: 0.78;
+
+    letter-spacing: -3px;
+}
+
+
+.apparel-store-header > h2 span {
+    display: block;
+
+    margin-bottom: 24px;
+
+    color: var(--blue);
+}
+
+
+/* =========================================================
+   CURRENT LINE / CENSORED
+   ========================================================= */
+
+.apparel-line {
+    margin-top: 72px;
+}
+
+
+.apparel-line-label {
+    margin-bottom: 12px;
+
+    color: #777777;
+
+    font-size: 9px;
+    font-weight: 900;
+
+    letter-spacing: 4px;
+}
+
+
+.apparel-line h3 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: Impact, "Arial Black", sans-serif;
+
+    font-size: clamp(55px, 7vw, 105px);
+
+    line-height: 0.95;
+
+    letter-spacing: 1px;
+}
+
+
+.apparel-story {
+    max-width: 760px;
+
+    margin-top: 28px;
+
+    color: #bdbdbd;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+
+.apparel-rule-line {
+    margin-top: 30px;
+
+    color: var(--blue);
+
+    font-size: 11px;
+    font-weight: 900;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   FOUR PRODUCT ROW
+   ========================================================= */
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+
+    width: 100%;
+}
+
+
+.product-card {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE TILE
+   ========================================================= */
+
+.product-image {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
+
+    overflow: hidden;
+
+    background: #111111;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition:
+        transform 0.45s ease,
+        filter 0.35s ease;
+}
+
+
+/* =========================================================
+   SHOP NOW HOVER
+   ========================================================= */
+
+.shop-overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: 10;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    opacity: 0;
+
+    background: rgba(0, 0, 0, 0);
+
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 900;
+
+    letter-spacing: 4px;
+
+    transition:
+        opacity 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.shop-overlay span {
+    color: var(--blue);
+
+    font-size: 16px;
+}
+
+
+.product-image:hover {
+    transform:
+        translateY(-10px)
+        scale(1.018);
+
+    box-shadow:
+        0 20px 45px
+        rgba(0, 0, 0, 0.45);
+}
+
+
+.product-image:hover img {
+    transform: scale(1.05);
+
+    filter: brightness(0.46);
+}
+
+
+.product-image:hover .shop-overlay {
+    opacity: 1;
+
+    background: rgba(0, 0, 0, 0.38);
+}
+
+
+/* =========================================================
+   PRODUCT DETAILS
+   ========================================================= */
+
+.product-info {
+    padding-top: 22px;
+}
+
+
+.product-info h3 {
+    margin: 0 0 13px;
+
+    color: #ffffff;
+
+    font-family: Impact, "Arial Black", sans-serif;
+
+    font-size: clamp(25px, 2.2vw, 36px);
+
+    line-height: 1;
+
+    letter-spacing: 0.5px;
+}
+
+
+.product-spec {
+    margin: 0 0 12px;
+
+    color: #888888;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    line-height: 1.65;
+
+    letter-spacing: 1.7px;
+}
+
+
+.product-price {
+    margin: 0;
+
+    color: var(--blue);
+
+    font-family: Impact, "Arial Black", sans-serif;
+
+    font-size: 26px;
+
+    line-height: 1;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .apparel-store {
+        padding:
+            100px
+            28px
+            110px;
+    }
+
+
+    .product-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap:
+            55px
+            18px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .apparel-store {
+        padding:
+            85px
+            20px
+            95px;
+    }
+
+
+    .apparel-store-header {
+        margin-bottom: 48px;
+    }
+
+
+    .apparel-store-header > h2 {
+        font-size: 20vw;
+
+        line-height: 0.82;
+
+        letter-spacing: -2px;
+    }
+
+
+    .apparel-store-header > h2 span {
+        margin-bottom: 15px;
+    }
+
+
+    .apparel-line {
+        margin-top: 50px;
+    }
+
+
+    .apparel-line-label {
+        font-size: 8px;
+    }
+
+
+    .apparel-line h3 {
+        font-size: 16vw;
+    }
+
+
+    .apparel-story {
+        margin-top: 22px;
+
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    .apparel-rule-line {
+        margin-top: 24px;
+
+        font-size: 9px;
+
+        line-height: 1.7;
+    }
+
+
+    .product-grid {
+        grid-template-columns: 1fr;
+
+        gap: 52px;
+    }
+
+
+    .product-image {
+        aspect-ratio: 4 / 5;
+
+        transform: none;
+    }
+
+
+    /* MOBILE HAS NO REAL HOVER.
+       KEEP SHOP NOW VISIBLE AND TAPPABLE. */
+
+    .shop-overlay {
+        top: auto;
+        bottom: 0;
+
+        height: 30%;
+
+        padding: 20px;
+
+        opacity: 1;
+
+        align-items: flex-end;
+        justify-content: flex-end;
+
+        background:
+            linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.78),
+                rgba(0, 0, 0, 0)
+            );
+
+        font-size: 9px;
+    }
+
+
+    .product-image:hover {
+        transform: none;
+
+        box-shadow: none;
+    }
+
+
+    .product-image:hover img {
+        transform: none;
+
+        filter: none;
+    }
+
+
+    .product-info {
+        padding-top: 18px;
+    }
+
+
+    .product-info h3 {
+        font-size: 32px;
+    }
+
+
+    .product-spec {
+        font-size: 9px;
+    }
+
+
+    .product-price {
+        font-size: 24px;
+    }
+
+}
