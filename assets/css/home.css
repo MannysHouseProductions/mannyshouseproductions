@@ -1,6 +1,6 @@
 /* =========================================================
    MANNY'S HOUSE PRODUCTIONS
-   HOME PAGE
+   HOME PAGE — CLEAN MASTER CSS
    ========================================================= */
 
 
@@ -17,7 +17,6 @@
     --soft-white: #f4f4f4;
     --gray: #9b9b9b;
 
-    /* Manny's House blue */
     --blue: #2e7bb1;
 }
 
@@ -38,15 +37,19 @@ html {
 
 body {
     margin: 0;
+
     background: var(--black);
     color: var(--white);
+
     font-family: Arial, Helvetica, sans-serif;
+
     overflow-x: hidden;
 }
 
 img,
 video {
     display: block;
+
     width: 100%;
     height: 100%;
 }
@@ -63,6 +66,7 @@ a {
 
 .site-header {
     position: fixed;
+
     top: 0;
     left: 0;
 
@@ -72,16 +76,18 @@ a {
     padding: 0 38px;
 
     display: flex;
+
     align-items: center;
     justify-content: space-between;
 
     z-index: 1000;
 
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.85),
-        rgba(0, 0, 0, 0)
-    );
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0)
+        );
 }
 
 .header-brand {
@@ -95,13 +101,13 @@ a {
 
 .header-nav {
     display: flex;
+
     align-items: center;
+
     gap: 25px;
 }
 
 .header-nav a {
-    position: relative;
-
     color: var(--white);
 
     font-size: 9px;
@@ -118,7 +124,7 @@ a {
 
 
 /* =========================================================
-   HERO / ENTRANCE TO THE HOUSE
+   HERO
    ========================================================= */
 
 .hero {
@@ -126,9 +132,11 @@ a {
 
     width: 100%;
     height: 100vh;
+
     min-height: 700px;
 
     display: flex;
+
     align-items: center;
 
     overflow: hidden;
@@ -137,12 +145,13 @@ a {
 }
 
 
-/* ---------------------------------------------------------
-   MOVING VIDEO STRIP
-   --------------------------------------------------------- */
+/* =========================================================
+   HERO VIDEO MARQUEE
+   ========================================================= */
 
 .hero-marquee {
     position: absolute;
+
     inset: 0;
 
     overflow: hidden;
@@ -159,11 +168,16 @@ a {
     height: 80vh;
 
     display: flex;
+
     gap: 14px;
 
     width: max-content;
 
-    animation: house-scroll 40s linear infinite;
+    animation:
+        house-scroll
+        40s
+        linear
+        infinite;
 }
 
 .hero-marquee:hover .marquee-track {
@@ -173,14 +187,20 @@ a {
 .hero-tile {
     position: relative;
 
-    width: clamp(300px, 31vw, 520px);
+    width:
+        clamp(
+            300px,
+            31vw,
+            520px
+        );
+
     height: 100%;
 
     flex-shrink: 0;
 
     overflow: hidden;
 
-    background: #111;
+    background: #111111;
 }
 
 .hero-tile video {
@@ -190,8 +210,8 @@ a {
     object-fit: cover;
 
     filter:
-    grayscale(20%)
-    brightness(0.85);
+        grayscale(20%)
+        brightness(0.85);
 
     transition:
         transform 0.5s ease,
@@ -203,7 +223,7 @@ a {
 
     filter:
         grayscale(0%)
-        brightness(0.95);
+        brightness(1);
 }
 
 @keyframes house-scroll {
@@ -219,12 +239,13 @@ a {
 }
 
 
-/* ---------------------------------------------------------
-   HERO DARK OVERLAY
-   --------------------------------------------------------- */
+/* =========================================================
+   HERO OVERLAY
+   ========================================================= */
 
 .hero-shade {
     position: absolute;
+
     inset: 0;
 
     z-index: 2;
@@ -241,16 +262,21 @@ a {
         );
 }
 
-/* ---------------------------------------------------------
-   HERO TEXT
-   --------------------------------------------------------- */
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
 
 .hero-content {
     position: relative;
 
     z-index: 10;
 
-    width: min(1250px, 90%);
+    width:
+        min(
+            1250px,
+            90%
+        );
 
     margin: 0 auto;
 }
@@ -271,9 +297,17 @@ a {
 
     color: var(--white);
 
-    font-family: Impact, "Arial Black", sans-serif;
+    font-family:
+        Impact,
+        "Arial Black",
+        sans-serif;
 
-    font-size: clamp(75px, 12vw, 180px);
+    font-size:
+        clamp(
+            75px,
+            12vw,
+            180px
+        );
 
     font-weight: 900;
 
@@ -311,28 +345,6 @@ a {
     color: var(--blue);
 }
 
-.scroll-cue {
-    display: inline-flex;
-    align-items: center;
-    gap: 18px;
-
-    margin-top: 38px;
-    padding-bottom: 8px;
-
-    border-bottom: 1px solid var(--blue);
-
-    color: var(--blue);
-
-    font-size: 10px;
-    font-weight: 900;
-
-    letter-spacing: 3px;
-}
-
-.scroll-cue span {
-    font-size: 16px;
-}
-
 
 /* =========================================================
    HERO BUTTONS
@@ -340,25 +352,31 @@ a {
 
 .hero-buttons {
     display: flex;
+
     align-items: center;
+
     gap: 14px;
+
     flex-wrap: wrap;
 
     margin-top: 28px;
 }
 
 .hero-buttons .primary-button {
-    margin: 0;
+    margin-top: 0;
 }
 
 .instagram-button {
     background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.45);
 }
 
 
 /* =========================================================
-   MAIN STORY SYSTEM
+   STORY SYSTEM — DESKTOP
    ========================================================= */
 
 .story-section {
@@ -366,20 +384,19 @@ a {
 
     display: grid;
 
-    grid-template-columns: 55% 45%;
+    grid-template-columns:
+        55%
+        45%;
 
     width: 100%;
 
     background: var(--black);
 }
 
-
-/* ---------------------------------------------------------
-   ALTERNATING SECTIONS
-   --------------------------------------------------------- */
-
 .story-section.reverse {
-    grid-template-columns: 45% 55%;
+    grid-template-columns:
+        45%
+        55%;
 }
 
 .story-section.reverse .story-visual {
@@ -456,6 +473,7 @@ a {
     content: "";
 
     position: absolute;
+
     inset: 0;
 
     pointer-events: none;
@@ -476,7 +494,13 @@ a {
 
     z-index: 20;
 
-    color: rgba(255, 255, 255, 0.62);
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.62
+        );
 
     font-size: 8px;
     font-weight: 700;
@@ -486,7 +510,7 @@ a {
 
 
 /* =========================================================
-   STORY SIDE
+   STORY COPY SIDE
    ========================================================= */
 
 .story-copy {
@@ -499,15 +523,23 @@ a {
     min-height: 100vh;
 
     display: flex;
+
     align-items: center;
 
     padding:
         100px
-        clamp(40px, 6vw, 95px);
+        clamp(
+            40px,
+            6vw,
+            95px
+        );
 
     opacity: 0.22;
 
-    transition: opacity 0.6s ease;
+    transition:
+        opacity
+        0.6s
+        ease;
 }
 
 .story-panel.active {
@@ -516,6 +548,7 @@ a {
 
 .panel-inner {
     width: 100%;
+
     max-width: 650px;
 }
 
@@ -548,9 +581,17 @@ a {
 
     color: var(--white);
 
-    font-family: Impact, "Arial Black", sans-serif;
+    font-family:
+        Impact,
+        "Arial Black",
+        sans-serif;
 
-    font-size: clamp(45px, 5.4vw, 82px);
+    font-size:
+        clamp(
+            45px,
+            5.4vw,
+            82px
+        );
 
     line-height: 0.91;
 
@@ -576,26 +617,34 @@ a {
 }
 
 .accent-copy {
-    color: var(--blue) !important;
+    color:
+        var(--blue)
+        !important;
 
     font-weight: 700;
 }
 
 
 /* =========================================================
-   BUTTONS
+   PRIMARY BUTTONS
    ========================================================= */
 
 .primary-button {
     display: inline-flex;
+
     align-items: center;
+
     gap: 24px;
 
     margin-top: 28px;
 
-    padding: 18px 23px;
+    padding:
+        18px
+        23px;
 
-    border: 1px solid var(--blue);
+    border:
+        1px solid
+        var(--blue);
 
     color: var(--blue);
 
@@ -617,35 +666,35 @@ a {
 
     background: var(--blue);
 
-    transform: translateY(-2px);
+    transform:
+        translateY(-2px);
 }
 
 
 /* =========================================================
-   VISUALS SECTION
+   SECTION BACKGROUNDS
    ========================================================= */
 
 .visuals-section .story-copy {
     background: #0b0b0b;
 }
 
-
-/* =========================================================
-   ARTIST DEVELOPMENT SECTION
-   ========================================================= */
-
 .development-section .story-copy {
     background: #080808;
+}
+
+.live-section .story-copy {
+    background: #0d0d0d;
+}
+
+.work-section .story-copy {
+    background: #070707;
 }
 
 
 /* =========================================================
    LIVE SECTION
    ========================================================= */
-
-.live-section .story-copy {
-    background: #0d0d0d;
-}
 
 .ticket-example {
     margin: 32px 0;
@@ -656,7 +705,9 @@ a {
         8px
         22px;
 
-    border-left: 3px solid var(--blue);
+    border-left:
+        3px solid
+        var(--blue);
 }
 
 .ticket-example span {
@@ -676,103 +727,29 @@ a {
 
     color: var(--white);
 
-    font-family: Impact, "Arial Black", sans-serif;
+    font-family:
+        Impact,
+        "Arial Black",
+        sans-serif;
 
-    font-size: clamp(24px, 3vw, 38px);
+    font-size:
+        clamp(
+            24px,
+            3vw,
+            38px
+        );
 
     letter-spacing: 1px;
 }
 
 .event-date {
-    color: var(--blue) !important;
+    color:
+        var(--blue)
+        !important;
 
     font-weight: 900;
 
     letter-spacing: 4px;
-}
-
-
-/* =========================================================
-   WORK WITH THE HOUSE
-   ========================================================= */
-
-.work-section .story-copy {
-    background: #070707;
-}
-
-
-/* =========================================================
-   MANNY'S HOUSE APPAREL
-   ========================================================= */
-
-.apparel-section .story-copy {
-    background: #0a0a0a;
-}
-
-.apparel-rule {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-    margin-top: 45px;
-}
-
-.apparel-rule strong {
-    color: var(--white);
-
-    font-family: Impact, "Arial Black", sans-serif;
-
-    font-size: clamp(25px, 3vw, 42px);
-
-    letter-spacing: 1px;
-}
-
-.apparel-rule strong:last-child {
-    color: var(--blue);
-}
-
-.censored-store-link {
-    cursor: pointer;
-}
-
-.store-hover {
-    position: absolute;
-
-    left: 50%;
-    bottom: 50px;
-
-    z-index: 25;
-
-    transform: translateX(-50%);
-
-    padding: 13px 18px;
-
-    border: 1px solid var(--blue);
-
-    background: rgba(0, 0, 0, 0.82);
-
-    color: var(--blue);
-
-    font-size: 9px;
-    font-weight: 900;
-
-    letter-spacing: 3px;
-
-    white-space: nowrap;
-
-    transition:
-        background 0.3s ease,
-        color 0.3s ease;
-}
-
-.censored-store-link:hover .store-hover {
-    background: var(--blue);
-
-    color: var(--white);
-}
-
-.final-apparel h2 {
-    font-size: clamp(60px, 7vw, 110px);
 }
 
 
@@ -783,9 +760,12 @@ a {
 .site-footer {
     min-height: 230px;
 
-    padding: 60px 40px;
+    padding:
+        60px
+        40px;
 
     display: flex;
+
     align-items: flex-end;
     justify-content: space-between;
 
@@ -793,9 +773,11 @@ a {
 
     background: #020202;
 
-    border-top: 1px solid #151515;
+    border-top:
+        1px solid
+        #151515;
 
-    color: #666;
+    color: #666666;
 
     font-size: 8px;
     font-weight: 700;
@@ -805,8 +787,7 @@ a {
 
 
 /* =========================================================
-   MOBILE
-   RESTORED ORIGINAL BEHAVIOR
+   MOBILE — EXISTING STORY EXPERIENCE
    ========================================================= */
 
 @media (max-width: 850px) {
@@ -814,23 +795,21 @@ a {
     .site-header {
         height: 65px;
 
-        padding: 0 18px;
+        padding:
+            0
+            18px;
     }
-
-
-    /* HIDE SECTION NAV ON MOBILE */
 
     .header-nav {
         display: none;
     }
 
 
-    /* =====================================================
-       HERO
-       ===================================================== */
+    /* HERO */
 
     .hero {
         height: 100svh;
+
         min-height: 100svh;
     }
 
@@ -868,7 +847,12 @@ a {
     }
 
     .hero h1 {
-        font-size: clamp(64px, 21vw, 105px);
+        font-size:
+            clamp(
+                64px,
+                21vw,
+                105px
+            );
 
         letter-spacing: -2px;
     }
@@ -880,9 +864,6 @@ a {
 
         letter-spacing: 2px;
     }
-
-
-    /* HERO BUTTONS STAY SMALL */
 
     .hero-buttons {
         display: flex;
@@ -899,15 +880,16 @@ a {
     .hero-buttons .primary-button {
         width: auto;
 
-        flex: 0 0 auto;
+        flex:
+            0
+            0
+            auto;
 
         justify-content: center;
     }
 
 
-    /* =====================================================
-       STORY SECTIONS
-       ===================================================== */
+    /* STORY */
 
     .story-section,
     .story-section.reverse {
@@ -920,11 +902,6 @@ a {
         grid-row: auto;
     }
 
-
-    /* =====================================================
-       STICKY VISUAL
-       ===================================================== */
-
     .story-visual {
         position: sticky;
 
@@ -934,11 +911,6 @@ a {
         height: 100svh;
     }
 
-
-    /* =====================================================
-       STORY COPY OVER VISUAL
-       ===================================================== */
-
     .story-copy {
         position: relative;
 
@@ -946,9 +918,10 @@ a {
 
         margin-top: -100svh;
 
-        background: transparent !important;
+        background:
+            transparent
+            !important;
     }
-
 
     .story-panel {
         position: relative;
@@ -974,16 +947,18 @@ a {
             );
     }
 
-
     .panel-inner {
         max-width: 94%;
     }
 
-
     .story-panel h2 {
-        font-size: clamp(45px, 14vw, 72px);
+        font-size:
+            clamp(
+                45px,
+                14vw,
+                72px
+            );
     }
-
 
     .story-panel p {
         font-size: 14px;
@@ -991,15 +966,12 @@ a {
         line-height: 1.65;
     }
 
-
     .visual-label {
         display: none;
     }
 
 
-    /* =====================================================
-       FOOTER
-       ===================================================== */
+    /* FOOTER */
 
     .site-footer {
         min-height: 280px;
@@ -1052,27 +1024,12 @@ a {
 
 
 /* =========================================================
-   ACCESSIBILITY / REDUCED MOTION
+   MANNY'S HOUSE APPAREL
+   FINAL STOREFRONT
    ========================================================= */
 
-@media (prefers-reduced-motion: reduce) {
 
-    html {
-        scroll-behavior: auto;
-    }
-
-    .marquee-track {
-        animation: none;
-    }
-
-    * {
-        transition-duration: 0.01ms !important;
-    }
-
-}
-/* =========================================================
-   MANNY'S HOUSE APPAREL — FULL-WIDTH STORE
-   ========================================================= */
+/* STORE FLOOR */
 
 .apparel-store {
     position: relative;
@@ -1080,127 +1037,173 @@ a {
     width: 100%;
 
     padding:
-        120px
-        clamp(24px, 5vw, 80px)
-        130px;
+        90px
+        clamp(
+            24px,
+            4vw,
+            65px
+        )
+        110px;
 
     background: #050505;
+
+    color: #ffffff;
 
     overflow: hidden;
 }
 
 
 /* =========================================================
-   APPAREL HEADER
+   STOREFRONT INTRO
    ========================================================= */
 
-.apparel-store-header {
+.apparel-storefront-intro {
     width: 100%;
 
-    margin-bottom: 72px;
-}
+    margin:
+        0
+        auto
+        42px;
 
-
-.apparel-store-header > h2 {
-    margin: 0;
-
-    color: #ffffff;
-
-    font-family: Impact, "Arial Black", sans-serif;
-
-    font-size: clamp(80px, 11vw, 180px);
-
-    line-height: 0.78;
-
-    letter-spacing: -3px;
-}
-
-
-.apparel-store-header > h2 span {
-    display: block;
-
-    margin-bottom: 24px;
-
-    color: var(--blue);
+    text-align: center;
 }
 
 
 /* =========================================================
-   CURRENT LINE / CENSORED
+   BIG BILLBOARD
    ========================================================= */
 
-.apparel-line {
-    margin-top: 72px;
+.apparel-billboard {
+    width: 100%;
+
+    text-align: center;
 }
 
-
-.apparel-line-label {
-    margin-bottom: 12px;
-
-    color: #777777;
-
-    font-size: 9px;
-    font-weight: 900;
-
-    letter-spacing: 4px;
-}
-
-
-.apparel-line h3 {
+.apparel-billboard h2 {
     margin: 0;
 
     color: #ffffff;
 
-    font-family: Impact, "Arial Black", sans-serif;
+    font-family:
+        Impact,
+        "Arial Black",
+        sans-serif;
 
-    font-size: clamp(55px, 7vw, 105px);
+    font-size:
+        clamp(
+            105px,
+            13vw,
+            205px
+        );
 
-    line-height: 0.95;
+    font-weight: 900;
 
-    letter-spacing: 1px;
+    line-height: 0.76;
+
+    letter-spacing: -4px;
+
+    text-align: center;
+
+    text-transform: uppercase;
 }
 
+.apparel-billboard h2 span {
+    display: block;
 
-.apparel-story {
-    max-width: 760px;
-
-    margin-top: 28px;
-
-    color: #bdbdbd;
-
-    font-size: 15px;
-
-    line-height: 1.75;
-}
-
-
-.apparel-rule-line {
-    margin-top: 30px;
+    margin-bottom: 18px;
 
     color: var(--blue);
 
-    font-size: 11px;
-    font-weight: 900;
-
-    letter-spacing: 3px;
+    text-align: center;
 }
 
 
 /* =========================================================
-   FOUR PRODUCT ROW
+   CENSORED COLLECTION
+   ========================================================= */
+
+.apparel-collection-intro {
+    width: 100%;
+
+    max-width: 680px;
+
+    margin:
+        32px
+        auto
+        0;
+
+    text-align: center;
+}
+
+
+/* SMALL CENTERED LOGO */
+
+.apparel-collection-intro .censored-logo {
+    display: block;
+
+    width: 180px;
+    max-width: 180px;
+
+    height: auto;
+
+    margin:
+        0
+        auto;
+}
+
+
+/* SHORT STORY */
+
+.apparel-collection-intro .censored-story {
+    display: block;
+
+    width: 100%;
+
+    max-width: 620px;
+
+    margin:
+        18px
+        auto
+        0;
+
+    padding: 0;
+
+    color: #b7b7b7;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    text-align: center;
+
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* =========================================================
+   PRODUCTS — FOUR ACROSS
    ========================================================= */
 
 .product-grid {
     display: grid;
 
     grid-template-columns:
-        repeat(4, minmax(0, 1fr));
+        repeat(
+            4,
+            minmax(
+                0,
+                1fr
+            )
+        );
 
     gap: 18px;
 
     width: 100%;
-}
 
+    margin: 0;
+}
 
 .product-card {
     min-width: 0;
@@ -1227,12 +1230,13 @@ a {
     cursor: pointer;
 
     transition:
-        transform 0.35s ease,
-        box-shadow 0.35s ease;
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-
 .product-image img {
+    display: block;
+
     width: 100%;
     height: 100%;
 
@@ -1240,123 +1244,160 @@ a {
     object-position: center;
 
     transition:
-        transform 0.45s ease,
-        filter 0.35s ease;
+        transform 0.4s ease,
+        filter 0.3s ease;
 }
 
 
 /* =========================================================
-   SHOP NOW HOVER
+   SHOP NOW OVERLAY
    ========================================================= */
 
 .shop-overlay {
     position: absolute;
+
     inset: 0;
 
-    z-index: 10;
+    z-index: 5;
 
     display: flex;
 
     align-items: center;
     justify-content: center;
 
-    gap: 14px;
+    gap: 12px;
 
     opacity: 0;
 
-    background: rgba(0, 0, 0, 0);
-
     color: #ffffff;
 
-    font-size: 11px;
+    background:
+        rgba(
+            0,
+            0,
+            0,
+            0
+        );
+
+    font-size: 10px;
     font-weight: 900;
 
-    letter-spacing: 4px;
+    letter-spacing: 3px;
 
     transition:
-        opacity 0.3s ease,
-        background 0.3s ease;
+        opacity 0.25s ease,
+        background 0.25s ease;
 }
-
 
 .shop-overlay span {
     color: var(--blue);
 
-    font-size: 16px;
-}
-
-
-.product-image:hover {
-    transform:
-        translateY(-10px)
-        scale(1.018);
-
-    box-shadow:
-        0 20px 45px
-        rgba(0, 0, 0, 0.45);
-}
-
-
-.product-image:hover img {
-    transform: scale(1.05);
-
-    filter: brightness(0.46);
-}
-
-
-.product-image:hover .shop-overlay {
-    opacity: 1;
-
-    background: rgba(0, 0, 0, 0.38);
+    font-size: 15px;
 }
 
 
 /* =========================================================
-   PRODUCT DETAILS
+   PRODUCT HOVER
+   ========================================================= */
+
+.product-image:hover {
+    transform:
+        translateY(-8px)
+        scale(1.012);
+
+    box-shadow:
+        0
+        18px
+        42px
+        rgba(
+            0,
+            0,
+            0,
+            0.48
+        );
+}
+
+.product-image:hover img {
+    transform:
+        scale(1.04);
+
+    filter:
+        brightness(0.48);
+}
+
+.product-image:hover .shop-overlay {
+    opacity: 1;
+
+    background:
+        rgba(
+            0,
+            0,
+            0,
+            0.36
+        );
+}
+
+
+/* =========================================================
+   PRODUCT INFO
    ========================================================= */
 
 .product-info {
-    padding-top: 22px;
+    padding-top: 17px;
 }
 
-
 .product-info h3 {
-    margin: 0 0 13px;
+    margin:
+        0
+        0
+        10px;
 
     color: #ffffff;
 
-    font-family: Impact, "Arial Black", sans-serif;
+    font-family:
+        Impact,
+        "Arial Black",
+        sans-serif;
 
-    font-size: clamp(25px, 2.2vw, 36px);
+    font-size:
+        clamp(
+            24px,
+            2vw,
+            34px
+        );
 
     line-height: 1;
 
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
 }
 
-
 .product-spec {
-    margin: 0 0 12px;
+    margin:
+        0
+        0
+        10px;
 
     color: #888888;
 
     font-size: 9px;
     font-weight: 800;
 
-    line-height: 1.65;
+    line-height: 1.55;
 
-    letter-spacing: 1.7px;
+    letter-spacing: 1.4px;
 }
-
 
 .product-price {
     margin: 0;
 
     color: var(--blue);
 
-    font-family: Impact, "Arial Black", sans-serif;
+    font-family:
+        Impact,
+        "Arial Black",
+        sans-serif;
 
-    font-size: 26px;
+    font-size: 24px;
 
     line-height: 1;
 
@@ -1365,51 +1406,61 @@ a {
 
 
 /* =========================================================
-   TABLET
+   APPAREL — TABLET
    ========================================================= */
 
 @media (max-width: 1000px) {
 
     .apparel-store {
         padding:
-            100px
-            28px
-            110px;
+            80px
+            24px
+            95px;
     }
 
+    .apparel-billboard h2 {
+        font-size: 15vw;
+    }
 
     .product-grid {
         grid-template-columns:
-            repeat(2, minmax(0, 1fr));
+            repeat(
+                2,
+                minmax(
+                    0,
+                    1fr
+                )
+            );
 
         gap:
-            55px
-            18px;
+            45px
+            16px;
     }
 
 }
 
 
 /* =========================================================
-   MOBILE
+   APPAREL — MOBILE
    ========================================================= */
 
 @media (max-width: 600px) {
 
     .apparel-store {
         padding:
-            85px
-            20px
-            95px;
+            65px
+            18px
+            80px;
+    }
+
+    .apparel-storefront-intro {
+        margin-bottom: 32px;
     }
 
 
-    .apparel-store-header {
-        margin-bottom: 48px;
-    }
+    /* BILLBOARD */
 
-
-    .apparel-store-header > h2 {
+    .apparel-billboard h2 {
         font-size: 20vw;
 
         line-height: 0.82;
@@ -1417,69 +1468,56 @@ a {
         letter-spacing: -2px;
     }
 
-
-    .apparel-store-header > h2 span {
-        margin-bottom: 15px;
+    .apparel-billboard h2 span {
+        margin-bottom: 9px;
     }
 
 
-    .apparel-line {
-        margin-top: 50px;
+    /* COLLECTION */
+
+    .apparel-collection-intro {
+        margin-top: 26px;
+    }
+
+    .apparel-collection-intro .censored-logo {
+        width: 145px;
+
+        max-width: 145px;
+    }
+
+    .apparel-collection-intro .censored-story {
+        max-width: 94%;
+
+        margin-top: 14px;
+
+        font-size: 13px;
+
+        line-height: 1.55;
     }
 
 
-    .apparel-line-label {
-        font-size: 8px;
-    }
-
-
-    .apparel-line h3 {
-        font-size: 16vw;
-    }
-
-
-    .apparel-story {
-        margin-top: 22px;
-
-        font-size: 14px;
-
-        line-height: 1.6;
-    }
-
-
-    .apparel-rule-line {
-        margin-top: 24px;
-
-        font-size: 9px;
-
-        line-height: 1.7;
-    }
-
+    /* PRODUCTS */
 
     .product-grid {
         grid-template-columns: 1fr;
 
-        gap: 52px;
+        gap: 42px;
     }
-
 
     .product-image {
         aspect-ratio: 4 / 5;
-
-        transform: none;
     }
 
 
-    /* MOBILE HAS NO REAL HOVER.
-       KEEP SHOP NOW VISIBLE AND TAPPABLE. */
+    /* MOBILE DOESN'T RELY ON HOVER */
 
     .shop-overlay {
         top: auto;
         bottom: 0;
 
-        height: 30%;
+        height: 27%;
 
-        padding: 20px;
+        padding: 16px;
 
         opacity: 1;
 
@@ -1489,13 +1527,12 @@ a {
         background:
             linear-gradient(
                 to top,
-                rgba(0, 0, 0, 0.78),
+                rgba(0, 0, 0, 0.72),
                 rgba(0, 0, 0, 0)
             );
 
         font-size: 9px;
     }
-
 
     .product-image:hover {
         transform: none;
@@ -1503,31 +1540,55 @@ a {
         box-shadow: none;
     }
 
-
     .product-image:hover img {
         transform: none;
 
         filter: none;
     }
 
-
     .product-info {
-        padding-top: 18px;
+        padding-top: 15px;
     }
-
 
     .product-info h3 {
-        font-size: 32px;
+        font-size: 30px;
     }
-
-
-    .product-spec {
-        font-size: 9px;
-    }
-
 
     .product-price {
-        font-size: 24px;
+        font-size: 23px;
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY / REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .marquee-track {
+        animation: none;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration:
+            0.01ms
+            !important;
+
+        animation-duration:
+            0.01ms
+            !important;
+
+        animation-iteration-count:
+            1
+            !important;
     }
 
 }
