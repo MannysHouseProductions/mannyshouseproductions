@@ -1228,3 +1228,311 @@ a {
     }
 
 }
+/* =========================================================
+   APPAREL STOREFRONT — CENTERED INTRO
+   ========================================================= */
+
+.apparel-storefront-intro {
+    width: 100%;
+
+    max-width: 1500px;
+
+    margin: 0 auto 80px;
+
+    padding:
+        35px
+        20px
+        75px;
+
+    text-align: center;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.10);
+}
+
+
+/* =========================================================
+   MANNY'S HOUSE
+   ========================================================= */
+
+.apparel-kicker {
+    margin: 0 0 18px;
+
+    color: var(--blue);
+
+    font-family:
+        Impact,
+        "Arial Black",
+        sans-serif;
+
+    font-size:
+        clamp(
+            60px,
+            8vw,
+            130px
+        );
+
+    line-height: 0.9;
+
+    letter-spacing: -2px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   APPAREL
+   ========================================================= */
+
+.apparel-main-title {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family:
+        Impact,
+        "Arial Black",
+        sans-serif;
+
+    font-size:
+        clamp(
+            95px,
+            13vw,
+            210px
+        );
+
+    line-height: 0.78;
+
+    letter-spacing: -4px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   CURRENT LINE
+   ========================================================= */
+
+.apparel-current-line {
+    width: 100%;
+
+    margin-top: 105px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+.current-line-label {
+    margin: 0 0 30px;
+
+    color: #777777;
+
+    font-size: 9px;
+    font-weight: 900;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   CENSORED LOGO
+   ========================================================= */
+
+.censored-logo {
+    display: block;
+
+    width:
+        min(
+            720px,
+            72vw
+        );
+
+    height: auto;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   CENSORED STORY
+   ========================================================= */
+
+.censored-story {
+    max-width: 720px;
+
+    margin:
+        42px
+        auto
+        0;
+
+    color: #b5b5b5;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   LIMITED-RUN RULE
+   ========================================================= */
+
+.censored-rules {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+    margin-top: 38px;
+
+    color: #ffffff;
+
+    font-size: 10px;
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+.rule-slash {
+    color: var(--blue);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   PRODUCT ROW SPACING
+   ========================================================= */
+
+.apparel-storefront-intro + .product-grid {
+    margin-top: 0;
+}
+
+
+/* =========================================================
+   DESKTOP PRODUCT PRESENCE
+   ========================================================= */
+
+@media (min-width: 1001px) {
+
+    .product-grid {
+        gap: 20px;
+    }
+
+    .product-image {
+        transition:
+            transform 0.35s ease,
+            box-shadow 0.35s ease;
+    }
+
+    .product-image:hover {
+        transform:
+            translateY(-10px)
+            scale(1.018);
+
+        box-shadow:
+            0 22px 55px
+            rgba(0, 0, 0, 0.50);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE APPAREL INTRO
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .apparel-storefront-intro {
+        margin-bottom: 50px;
+
+        padding:
+            20px
+            0
+            55px;
+    }
+
+
+    .apparel-kicker {
+        margin-bottom: 12px;
+
+        font-size: 15vw;
+
+        letter-spacing: -1px;
+    }
+
+
+    .apparel-main-title {
+        font-size: 22vw;
+
+        line-height: 0.82;
+
+        letter-spacing: -2px;
+    }
+
+
+    .apparel-current-line {
+        margin-top: 70px;
+    }
+
+
+    .current-line-label {
+        margin-bottom: 24px;
+
+        font-size: 8px;
+
+        letter-spacing: 4px;
+    }
+
+
+    .censored-logo {
+        width: 94%;
+    }
+
+
+    .censored-story {
+        max-width: 92%;
+
+        margin-top: 30px;
+
+        font-size: 14px;
+
+        line-height: 1.65;
+    }
+
+
+    .censored-rules {
+        flex-direction: column;
+
+        gap: 9px;
+
+        margin-top: 28px;
+
+        font-size: 9px;
+
+        line-height: 1.5;
+    }
+
+
+    .rule-slash {
+        display: none;
+    }
+
+}
