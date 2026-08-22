@@ -1141,14 +1141,12 @@ a {
 .apparel-collection-intro .censored-logo {
     display: block;
 
-    width: 180px;
-    max-width: 180px;
+    width: 280px;
+    max-width: 280px;
 
     height: auto;
 
-    margin:
-        0
-        auto;
+    margin: 0 auto;
 }
 
 
@@ -1157,28 +1155,57 @@ a {
 .apparel-collection-intro .censored-story {
     display: block;
 
+    position: relative;
+
     width: 100%;
+    max-width: 700px;
 
-    max-width: 620px;
+    margin: 24px auto 0;
 
-    margin:
-        18px
-        auto
-        0;
+    padding:
+        24px
+        30px;
 
-    padding: 0;
+    color: #a8a8a8;
 
-    color: #b7b7b7;
+    font-size: 15px;
+    font-weight: 400;
 
-    font-size: 14px;
+    line-height: 1.7;
 
-    line-height: 1.6;
+    letter-spacing: 0.2px;
 
     text-align: center;
 
-    opacity: 1;
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.13);
 
-    visibility: visible;
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.13);
+}
+
+
+.apparel-collection-intro .censored-story strong {
+    color: #ffffff;
+
+    font-weight: 800;
+}
+
+
+.apparel-collection-intro .censored-story em {
+    color: var(--blue);
+
+    font-style: normal;
+    font-weight: 900;
+}
+
+
+.apparel-collection-intro .censored-story span {
+    display: block;
+
+    margin-top: 9px;
 }
 
 
@@ -1479,22 +1506,24 @@ a {
         margin-top: 26px;
     }
 
-    .apparel-collection-intro .censored-logo {
-        width: 145px;
+  .apparel-collection-intro .censored-logo {
+    width: 210px;
+    max-width: 210px;
+}
 
-        max-width: 145px;
-    }
+  .apparel-collection-intro .censored-story {
+    max-width: 94%;
 
-    .apparel-collection-intro .censored-story {
-        max-width: 94%;
+    margin-top: 18px;
 
-        margin-top: 14px;
+    padding:
+        20px
+        10px;
 
-        font-size: 13px;
+    font-size: 13px;
 
-        line-height: 1.55;
-    }
-
+    line-height: 1.6;
+}
 
     /* PRODUCTS */
 
